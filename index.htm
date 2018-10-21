@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+		<script src="code.js" type="text/javascript"></script> 
+		<title>FSM Simulator for Devices</title>
+	</head>
+	<body onload="load()">
+		<h1>FSM Simulator for Devices</h1>
+		<div id="jsonEntryForm" class="section">
+			<h2>JSON Device Specification</h2>
+			<div>The following text field is the json entry box for the device to model.<br/>If you make a change to the json specification remember to click "Reload Device".</div>
+			<div><textarea id="jsondevice" rows="15" cols="98"></textarea></div>
+			<div>Load Example Devices: <span id="exampleLoadArea"></span></div>
+		</div>
+		<div id="deviceSimulator" class="section" style="display:none;">
+			<div style="vertical-align:middle">
+				<h2 style="display:inline">Device Simulator</h2> - <input onclick="loadDevice()" title="Reload Device" type="button" value="Reload Device" /> 
+			</div>
+			<p id="deviceDescription"></p>
+			<img id="deviceimage" src="" usemap="#devicemap" alt="Device Image" /> 
+			<map id="devicemap" name="devicemap"></map>
+			<p>Current State : <span id="deviceCurrentState"></span></p>
+			<p id="deviceActionButtons"></p>
+		</div>
+		<div id="deviceTransitionTable" class="section" style="display:none;">
+			<h2>State Transition Table</h2>
+			<div id="transitionTable"></div>
+		</div>
+		<div id="deviceManual" class="section" style="display:none;">
+			<h2>Simple User Manual</h2>
+			<p>Here is a simple explination of how this device works in terms of states and actions:</p>
+			<div id="manual"></div>
+		</div>
+		<div id="deviceGraphStats" class="section" style="display:none;">
+			<h2>Graph Analysis</h2>
+			<div>Here are a number of statistics and details about the graph describing this device.</div>
+			<h3>Pointless States</h3>
+			<p>These states have only one exit, which may imply that they serve no purpose.</p>
+			<div id="pointlessStates"></div>
+			<h3>Deadend States</h3>
+			<p>These states have no exit, in that no button press will more you to a different state.</p>
+			<div id="deadendStates"></div>
+			<h3>Strongly Connected</h3>
+			<div id="stronglyconnected"></div>
+			<h3>Average Traversal Cost</h3>
+			<div id="averagecost"></div>
+		</div>
+		<div id="deviceDot" class="section" style="display:none;">
+			<h2>Dot Description</h2>
+			<p>Here is a dot specification for the finite state machine representing this device:</p>
+			<p id="dotDescription"></p>
+		</div>
+		<div id="gnoming" class="section">
+			<h2>Gnomes</h2>
+			<p>Here you are able to run a gnome simulation:</p>
+			<input type="text" id="gnomenumberofruns" value="1000"/>
+			<input type="button" value="Run Simulation" onclick="javascript:runGnomeSimulation()"/>
+			<div id="gnomeresults"></div>
+		</div>
+		<div id="author" class="section">
+			<h2>Author</h2>
+			<p>Written by James Gawn with contributions from Gareth Thomas while at Swansea University on the Interactive System Design course.</p>
+		</div>
+	</body>
+</html>

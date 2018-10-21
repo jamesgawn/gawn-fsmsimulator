@@ -1,0 +1,80 @@
+﻿img
+{
+	border-style: none;
+}
+body
+{
+	font-family: Sans-Serif;
+}
+h2
+{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: larger;
+}
+a.linkButton {
+	cursor:pointer;
+}
+a.linkButton:hover {
+	text-decoration:underline;
+}
+h3
+{	
+	font-size: medium;
+}
+div.section 
+{
+	padding: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: #dddddd;
+}
+div.section div 
+{
+	padding: 2px;
+}
+
+/*
+ * JSON Section
+ */
+div#jsondevicedefaultbuttons 
+{
+	float: right;
+	width: 150px;
+
+	background: black;
+}
+input.loadjsonexamplebutton 
+{
+	width: 140px;
+}
+
+/*
+ * Device Simulator Section
+ */
+div#deviceSimulator
+{
+	display: none;
+}
+
+/*
+ * Transition Table Section
+ */
+table.transitiontable 
+{
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+table.transitiontable tr td
+{
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	padding: 2px;
+}
+
+/*
+ * Dot Description
+ */
+ p#dotDescription {
+	font-family: serif;
+}
